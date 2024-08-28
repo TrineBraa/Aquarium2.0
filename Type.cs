@@ -13,6 +13,7 @@ namespace Aquarium2._0
 
         }
 
+
         public enum TypeName
         {
             Pufferfish,
@@ -23,16 +24,31 @@ namespace Aquarium2._0
         }
 
 
-        
-        private void FishInformation(TypeName Fish)
+        public Dictionary<TypeName,string> FishInformation()
         {
-            var fishInfo = new Dictionary<TypeName, Fish>
+            var fishInfo = new Dictionary<TypeName, string>
             {
-
+                {TypeName.Pufferfish, "Puffs up when scared, is abit Spikey" },
+                {TypeName.Hammerhead, "Looks like a hammer, abit bitey!" },
+                {TypeName.Goldfish, "The golden one, so shiney!" },
+                {TypeName.Jellyfish, "peaceful little blob, so squishy!" },
+                {TypeName.Tigershark, "An aggressive guy, so stripey!" }
             };
+            return fishInfo;
         }
 
 
+        public void ListFish(Dictionary<TypeName, string> fishInfo)
+        {
+            foreach (var Fishey in fishInfo)
+            {
+                Console.WriteLine($"\t\t{Fishey.Key}");
+            }
+        }
+
+
+       
+        
 
 
     }
