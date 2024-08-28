@@ -8,5 +8,7 @@ namespace Aquarium2._0
 {
     internal class Tank :  Type
     {
+        private List<Type> TypeList;
+
     }
 }
