@@ -8,7 +8,10 @@ namespace Aquarium2._0
 {
     internal class Type : Fish
     {
-       
+        public Type(TypeName typeName) : base(typeName, "")
+        {
+
+        }
 
         public enum TypeName
         {
@@ -19,15 +22,8 @@ namespace Aquarium2._0
             Tigershark,
         }
 
-        private TypeName TypeOfFish { get; }
 
-        public Type(TypeName typeName) : base("", "")
-        {
-            TypeOfFish = typeName;
-
-        }
-
-
+        
         private void FishInformation(TypeName Fish)
         {
             var fishInfo = new Dictionary<TypeName, Fish>

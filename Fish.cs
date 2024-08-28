@@ -8,28 +8,20 @@ namespace Aquarium2._0
 {
     internal abstract class Fish
     {
-        protected Type.TypeName Name;
-        protected string description;
-        
+        protected Type.TypeName Name { get; set; }
+        protected string Description{ get; private set; }
 
-        public Type.TypeName name
+        protected Fish(Type.TypeName name, string description)
         {
-            get { return Name; }
-            set { Name = value; }
+            Name = name;
+            Description = description;
         }
 
-        public string Dscription
+        public virtual void FishInfortmation()
         {
-            get;
-            private set;
+
         }
 
-      
 
-        protected Fish(Type.TypeName Name, string _description)
-        {
-            Dscription = _description;
-           
-        }
     }
 }
