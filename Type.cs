@@ -30,7 +30,10 @@ namespace Aquarium2._0
 
         private void FishInformation(TypeName Fish)
         {
+            var fishInfo = new Dictionary<TypeName, Fish>
+            {
 
+            };
         }
 
 

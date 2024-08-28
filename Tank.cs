@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Aquarium2._0
 {
-    internal class Tank :  Type
+    internal class Tank
     {
-        private List<Type> TypeList;
+        
 
     }
 }
