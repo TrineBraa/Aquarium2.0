@@ -16,7 +16,7 @@ void Main()
  {
      while (true)
      {
-        Console.Clear();
+        
         Console.WriteLine("This is an aquarium where you can view some fish!");
          Console.WriteLine("\n\tThe fish are very excited to see you! \n");
 
@@ -29,6 +29,7 @@ void Main()
 
  void MainMenu()
  {
+     Console.Clear();
      Console.WriteLine("You can see some more information about the fish we have in this tank!");
      Console.WriteLine("Just choose what fish you'd like to see some more info about!");
      Console.WriteLine("You can also write exit and leave the aquarium.");
@@ -52,10 +53,12 @@ void Main()
             tank.PrintChoiceFish(Type.TypeName.Tigershark);
             break;
         case "exit":
+            Console.WriteLine("App is closing down!");
             Environment.Exit(0);
             break;
         default:
             Console.WriteLine("Please input either the name of a fish or exit.");
+            Thread.Sleep(2000);
             break;
      }
      

@@ -25,9 +25,9 @@ namespace Aquarium2._0
         public void PrintChoiceFish(Type.TypeName ChoosenFish)
         {
             Console.WriteLine(ChoosenFish);
-            Console.WriteLine(ChoosenFish);
+            Console.WriteLine();
 
-            Thread.Sleep(3000);
+            Console.ReadKey();
         }
 
     }
