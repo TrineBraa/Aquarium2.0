@@ -16,9 +16,10 @@ void Main()
  {
      while (true)
      {
-        
+         Console.Clear();
         Console.WriteLine("This is an aquarium where you can view some fish!");
          Console.WriteLine("\n\tThe fish are very excited to see you! \n");
+         Console.WriteLine("\n Here is a list of the fish:\n");
 
          tank.FishListed();
 
@@ -29,8 +30,7 @@ void Main()
 
  void MainMenu()
  {
-     Console.Clear();
-     Console.WriteLine("You can see some more information about the fish we have in this tank!");
+     Console.WriteLine("\nYou can see some more information about the fish we have in this tank!");
      Console.WriteLine("Just choose what fish you'd like to see some more info about!");
      Console.WriteLine("You can also write exit and leave the aquarium.");
      var MenuInput = Console.ReadLine().ToLower();

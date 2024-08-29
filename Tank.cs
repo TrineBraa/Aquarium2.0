@@ -16,7 +16,6 @@ namespace Aquarium2._0
         type = new Type(Type.TypeName.Pufferfish);
         }
 
-
         public void FishListed()
         {
             type.ListFish(type.FishInformation());
@@ -24,9 +23,19 @@ namespace Aquarium2._0
 
         public void PrintChoiceFish(Type.TypeName ChoosenFish)
         {
-            Console.WriteLine(ChoosenFish);
-            Console.WriteLine();
-
+            var fishInfo = type.FishInformation();
+            if (fishInfo.TryGetValue(ChoosenFish, out var description))
+            {
+                Console.Clear();
+                Console.WriteLine($"Fish: {ChoosenFish}");
+                Console.WriteLine($"Description: {description}");
+            }
+            else 
+            {
+                Console.Clear();
+                Console.WriteLine("Fish not found!");
+            }
+            
             Console.ReadKey();
         }
 
